@@ -1,0 +1,174 @@
+.auth-block {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.auth-block a {
+    color: #0085a1;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.auth-block a:hover {
+    color: #005566;
+}
+
+.welcome-text {
+    color: #333;
+    font-weight: 500;
+}
+
+main {
+    padding: 40px 20px;
+    background-color: #fff;
+    flex: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.user-content {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border-left: 4px solid #0085a1;
+}
+
+.guest-content {
+    background-color: #fff8e1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border-left: 4px solid #ff9800;
+}
+
+.guest-content a {
+    color: #0085a1;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 540px;
+    background: url(../images/1.jpg) bottom no-repeat;
+    background-size: cover;
+    background-position: 30% 66%;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;              
+  background: rgba(0, 0, 0, 0.5);  
+  z-index: 1;
+  height: 540px;
+}
+
+h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 5px 5px #0085a1;
+    font-size: 6rem;
+    z-index: 2;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 40px 0 20px;
+    margin-top: auto; /* Чтобы футер прижимался к низу */
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 15px;
+}
+
+.contacts-column,
+.schedule-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts-section h3,
+.schedule-section h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.contacts-section p,
+.schedule-section p {
+    margin-bottom: 10px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contacts-section strong {
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contacts-section,
+    .schedule-section {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .footer-column {
+        min-width: 100%;
+    }
+}
