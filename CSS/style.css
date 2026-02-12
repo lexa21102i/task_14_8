@@ -1,3 +1,562 @@
+.modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: slideIn 0.3s ease;
+        }
+
+        .btn-later {
+            background-color: #999;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-later:hover {
+            background-color: #777;
+        }
+        
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: #8b4513;
+        }
+
+        .modal h2 {
+            color: #8b4513;
+            margin-bottom: 15px;
+        }
+
+        .modal p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .modal form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .modal input[type="date"] {
+            padding: 12px;
+            border: 2px solid #e8d9c5;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .modal input[type="date"]:focus {
+            border-color: #8b4513;
+            outline: none;
+        }
+
+        .btn-submit {
+            background-color: #8b4513;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #6b3510;
+        }
+        .birthday-banner {
+            background: linear-gradient(135deg, #ffd700, #ffa500);
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .birthday-banner::before {
+            content: '🎂';
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            opacity: 0.2;
+        }
+
+        .birthday-banner::after {
+            content: '🎂';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            opacity: 0.2;
+        }
+
+        .birthday-content h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .birthday-content p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .birthday-gift {
+            background-color: rgba(255,255,255,0.2);
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .gift-icon {
+            font-size: 24px;
+        }
+
+        .discount-code {
+            background-color: white;
+            color: #8b4513;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .birthday-info {
+            background-color: #fff8e1;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ff9800;
+            color: #8b4513;
+            font-size: 18px;
+        }
+
+        .birthday-info p {
+            margin: 0;
+        }
+
+        .birthday-info strong {
+            font-size: 24px;
+            color: #ff9800;
+        }
+        .promo-banner {
+            background: linear-gradient(135deg, #8b4513, #d4a76a);
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promo-banner::before {
+            content: '🔥';
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 70px;
+            opacity: 0.15;
+        }
+
+        .promo-banner::after {
+            content: '🔥';
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 70px;
+            opacity: 0.15;
+        }
+
+        .promo-content h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .promo-content p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .promo-content strong {
+            background-color: #ffd700;
+            color: #8b4513;
+            padding: 5px 15px;
+            border-radius: 25px;
+        }
+        .countdown-timer {
+            background-color: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .timer-label {
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .timer-display {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .timer-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 80px;
+        }
+
+        .timer-number {
+            background-color: rgba(0,0,0,0.3);
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            width: 70px;
+            text-align: center;
+        }
+
+        .timer-text {
+            margin-top: 5px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        /* Стили для акции неавторизованных пользователей */
+        .guest-promo {
+            background: linear-gradient(135deg, #ff9800, #ff5722);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .guest-promo h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .guest-promo a {
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .guest-promo a:hover {
+            text-decoration: none;
+        }
+
+        /* Стили для цен со скидкой */
+        .program-price-discount {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 15px 15px;
+            padding-top: 12px;
+            border-top: 1px solid #e8d9c5;
+            gap: 8px;
+        }
+
+        .discount-info {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .birthday-badge {
+            background: linear-gradient(135deg, #ffd700, #ffa500);
+            color: #8b4513;
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .discount-badge {
+            background-color: #ff5722;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .price-block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            min-width: 110px;
+        }
+
+        .old-price {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+
+        .program-price.discount {
+            background-color: #ff5722;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 15px;
+            white-space: nowrap;
+            display: inline-block;
+            box-shadow: 0 2px 4px rgba(255, 87, 34, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .program-price-discount {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+    
+            .price-block {
+                align-items: flex-start;
+                width: 100%;
+            }
+    
+            .program-price.discount {
+                font-size: 14px;
+                padding: 5px 10px;
+            }
+            .timer-display {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .timer-block {
+                min-width: 70px;
+            }
+            
+            .timer-number {
+                font-size: 28px;
+                width: 60px;
+            }
+            
+            .birthday-content h2 {
+                font-size: 24px;
+            }
+            
+            .birthday-content p {
+                font-size: 16px;
+            }
+            
+            .promo-content h2 {
+                font-size: 22px;
+            }
+        }
+.spa-programs h2 {
+    text-align: center;
+    color: #8b4513;
+    margin-bottom: 35px;
+    font-size: 32px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.spa-programs h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #d4a76a;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.program-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e8d9c5;
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(139, 69, 19, 0.2);
+}
+
+.program-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.program-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.program-card:hover .program-image img {
+    transform: scale(1.05);
+}
+
+.program-card h3 {
+    color: #8b4513;
+    margin: 20px 20px 10px;
+    font-size: 20px;
+    min-height: auto;
+    line-height: 1.3;
+}
+
+.program-card p {
+    color: #666;
+    margin: 0 20px 15px;
+    line-height: 1.6;
+    font-size: 15px;
+    max-height: 120px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.program-card p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, white);
+    pointer-events: none;
+}
+
+.program-card:hover p {
+    max-height: 300px;
+    -webkit-line-clamp: unset;
+    overflow: auto;
+    padding-bottom: 5px;
+}
+
+.program-card:hover p::after {
+    display: none;
+}
+
+.program-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e8d9c5;
+}
+
+.program-price {
+    background-color: #8b4513;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(139, 69, 19, 0.3);
+    margin: auto 20px 20px; 
+    align-self: flex-start; 
+    display: inline-block;
+}
+
+.spa-image {
+    margin: 20px 0 30px;
+    position: relative;
+}
+
+.spa-image img {
+    border: 3px solid #8b4513;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
 .auth-block {
     position: absolute;
     top: 20px;
