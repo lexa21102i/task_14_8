@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/auth/auth.php';
+require __DIR__ . '/auth/auth.php'; 
 require __DIR__ . '/data/birthdays.php';
 $login = getUserLogin();
 // Обработка сохранения даты рождения (в сессию)

@@ -1,7 +1,13 @@
 <?php
+require __DIR__ . '/auth.php';
+
+setcookie('login', '', time() - 3600, '/');
+setcookie('password', '', time() - 3600, '/');
 
 unset($_COOKIE['login']);
-setcookie('login', null, -1, '/');
 unset($_COOKIE['password']);
-setcookie('password', null, -1, '/');
+
+session_start();
+session_destroy();
+
 header('Location: /14_8/index.php');
